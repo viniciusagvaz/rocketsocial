@@ -1,6 +1,6 @@
 import styles from "./Post.module.css";
 
-export function Post(props) {
+export function Post() {
 	return (
 		<article className={styles.post}>
 			<header>
@@ -27,14 +27,13 @@ export function Post(props) {
 					conhecimentos em React Native, Expo, e animações com Lottie. 🚀
 				</p>
 				<p>
-					👉
+					👉{" "}
 					<a href="https://github.com/ingridsj/disney-memory-game">
 						veja o projeto aqui! :D
 					</a>
 				</p>
 				<p>
-					<a href="#">#novoprojeto</a>
-					<a href="#"> #memorygame </a>
+					<a href="#">#novoprojeto</a> <a href="#"> #memorygame </a>{" "}
 					<a href="#"> #disney</a>
 				</p>
 			</div>
