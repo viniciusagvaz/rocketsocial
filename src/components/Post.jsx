@@ -8,11 +8,11 @@ export function Post() {
 				<div className={styles.author}>
 					<img
 						className={styles.avatar}
-						src="https://github.com/ingridsj.png"
+						src="https://media.licdn.com/dms/image/D4D03AQGCdfT1sEBxGA/profile-displayphoto-shrink_400_400/0/1687813480909?e=1698278400&v=beta&t=nisZwlVzwxAoXbV9k73QdvDGVd08Y-uKhBJ9GdH0HcA"
 					/>
 					<div className={styles.authorInfo}>
-						<strong>Ingrid Almeida</strong>
-						<span>Full Stack Developer</span>
+						<strong>Vinícius Vaz</strong>
+						<span>Front-End Developer</span>
 					</div>
 				</div>
 
@@ -24,18 +24,17 @@ export function Post() {
 			<div className={styles.content}>
 				<p>Fala galeraa 👋</p>
 				<p>
-					É um jogo da memória desenvolvido com propósito de aprimorar os
-					conhecimentos em React Native, Expo, e animações com Lottie. 🚀
+					Fiz um novo projeto na maratona Discover pela Rocketseat. É um aplicativo de gestão financeira, o Dev.Finances!! 🚀
 				</p>
 				<p>
 					👉{" "}
-					<a href="https://github.com/ingridsj/disney-memory-game">
+					<a href="https://github.com/viniciusagvaz/discover-devfinances">
 						veja o projeto aqui! :D
 					</a>
 				</p>
 				<p>
-					<a href="#">#novoprojeto</a> <a href="#"> #memorygame </a>{" "}
-					<a href="#"> #disney</a>
+					<a href="#">#novoprojeto</a> <a href="#"> #devfinances </a>{" "}
+					<a href="#"> #rocketseat</a>
 				</p>
 			</div>
 
