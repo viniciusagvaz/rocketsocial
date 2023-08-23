@@ -1,1 +1,1 @@
-<h1>Projeto 01 do Curso Ignite React pela Rocketseat</h1>
+<h3>Projeto 01 do Curso Ignite React pela Rocketseat</h3>
