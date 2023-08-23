@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// props: {author: "", content: ""}
 
 export function Post(props){
   return (
