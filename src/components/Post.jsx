@@ -1,13 +1,17 @@
+import { Avatar  } from "./Avatar";
 import { Comment } from "./Comment";
 import styles from "./Post.module.css";
+
+// author: {avatar_url: "", name: "", role: ""}
+// publishedAt: Date
+// content: String
 
 export function Post() {
 	return (
 		<article className={styles.post}>
 			<header>
 				<div className={styles.author}>
-					<img
-						className={styles.avatar}
+					<Avatar hasBorder= {true}
 						src="https://media.licdn.com/dms/image/D4D03AQGCdfT1sEBxGA/profile-displayphoto-shrink_400_400/0/1687813480909?e=1698278400&v=beta&t=nisZwlVzwxAoXbV9k73QdvDGVd08Y-uKhBJ9GdH0HcA"
 					/>
 					<div className={styles.authorInfo}>
@@ -22,20 +26,7 @@ export function Post() {
 			</header>
 
 			<div className={styles.content}>
-				<p>Fala galeraa 👋</p>
-				<p>
-					Fiz um novo projeto na maratona Discover pela Rocketseat. É um aplicativo de gestão financeira, o Dev.Finances!! 🚀
-				</p>
-				<p>
-					👉{" "}
-					<a href="https://github.com/viniciusagvaz/discover-devfinances">
-						veja o projeto aqui! :D
-					</a>
-				</p>
-				<p>
-					<a href="#">#novoprojeto</a> <a href="#"> #devfinances </a>{" "}
-					<a href="#"> #rocketseat</a>
-				</p>
+
 			</div>
 
 			<form className={styles.commentForm}>
@@ -47,11 +38,11 @@ export function Post() {
 				</footer>
 			</form>
 
-      <div className={styles.commentList}>
-        <Comment/>
-        <Comment/>
-        <Comment/>
-      </div>
+			<div className={styles.commentList}>
+				<Comment />
+				<Comment />
+				<Comment />
+			</div>
 		</article>
 	);
 }
