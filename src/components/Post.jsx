@@ -6,7 +6,7 @@ import styles from "./Post.module.css";
 // publishedAt: Date
 // content: String
 
-export function Post() {
+export function Post(props) {
 	return (
 		<article className={styles.post}>
 			<header>
