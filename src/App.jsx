@@ -6,17 +6,13 @@ import styles from "./App.module.css";
 
 import "./global.css";
 
-// author: {avatar_url: "", name: "", role: ""}
-// publishedAt: Date
-// content: String
-
 const posts = [
 	{
 		id: 1,
 		author: {
-			AvatarUrl: "https://github.com/ingridsj.png",
-			name: "Ingrid Almeida",
-			role: "Full Stack Developer @ Gasola",
+			avatarUrl: "https://github.com/viniciusagvaz.png",
+			name: "Vinicius Vaz",
+			role: "Front End Developer",
 		},
 		content: [
 			{ type: "paragraph", content: "Fala galeraa 👋" },
@@ -25,15 +21,15 @@ const posts = [
 				content:
 					"Fiz um novo projeto na maratona Discover pela Rocketseat. É um aplicativo de gestão financeira, o Dev.Finances!! 🚀",
 			},
-			{ type: "link", content: "👉{' '}, veja o projeto aqui! :D" },
+			{ type: "link", content: "👉 veja o projeto aqui! :D" },
 		],
-		publishAt: new Date("2023-08-23 11:43:34"),
+		publishedAt: new Date("2023-08-24 13:43:34"),
 	},
 	{
 		id: 2,
 		author: {
-			AvatarUrl:
-				"https://www.linkedin.com/in/marcoswunder138?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADtIh2kBDRMZk7BVBLZSJ7lB_hF9WB930lQ&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BVsX6SE5PRGaOsg%2BSbrPLtg%3D%3D",
+			avatarUrl:
+				"https://media.licdn.com/dms/image/D4E35AQH96yg0hlYG-g/profile-framedphoto-shrink_400_400/0/1651235394486?e=1693501200&v=beta&t=L60cjv28FvAIQolOA3t4gAGkH-JZ2xvZj9NjWDKaWGQ",
 			name: "Marcos Wunder",
 			role: "Técnico e Editor de Som",
 		},
@@ -45,7 +41,7 @@ const posts = [
 			},
 			{ type: "link", content: "Dá uma conferida aqui!" },
 		],
-		publishAt: new Date("2023-08-23 13:15:06"),
+		publishedAt: new Date("2023-08-24 13:05:06"),
 	},
 ];
 
@@ -60,13 +56,12 @@ export function App() {
 				<main>
 					{posts.map(post => {
 						return (
-                     // eslint-disable-next-line react/jsx-key
-                     <Post 
-                        author={post.author}
-                        content={post.content}
-                        publishedAt={post.publishAt}
-                     />
-                     );
+							<Post
+								author={post.author}
+								content={post.content}
+								publishedAt={post.publishedAt}
+							/>
+						);
 					})}
 				</main>
 			</div>

@@ -1,4 +1,7 @@
-import { Avatar  } from "./Avatar";
+import { format, formatDistanceToNow } from "date-fns";
+import { ptBR } from "date-fns/locale";
+
+import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 
@@ -6,27 +9,49 @@ import styles from "./Post.module.css";
 // publishedAt: Date
 // content: String
 
-export function Post(props) {
+export function Post({ author, publishedAt, content }) {
+	const publishedDateFormatted = format(
+		publishedAt,
+		"d 'de' LLLL 'às' HH:mm'h'",
+		{ locale: ptBR }
+	);
+
+	const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+		locale: ptBR,
+		addSuffix: true,
+	});
+
 	return (
 		<article className={styles.post}>
 			<header>
 				<div className={styles.author}>
-					<Avatar hasBorder= {true}
-						src="https://media.licdn.com/dms/image/D4D03AQGCdfT1sEBxGA/profile-displayphoto-shrink_400_400/0/1687813480909?e=1698278400&v=beta&t=nisZwlVzwxAoXbV9k73QdvDGVd08Y-uKhBJ9GdH0HcA"
-					/>
+					<Avatar src={author.avatarUrl} />
 					<div className={styles.authorInfo}>
-						<strong>Vinícius Vaz</strong>
-						<span>Front-End Developer</span>
+						<strong>{author.name}</strong>
+						<span>{author.role}</span>
 					</div>
 				</div>
 
-				<time title="23 de Agosto às 16:45h" dateTime="2023-08-23 16:45:31">
-					Publicado há 1h
+				<time
+					title={publishedDateFormatted}
+					dateTime={publishedAt.toISOString()}>
+					{publishedDateRelativeToNow}
 				</time>
 			</header>
 
 			<div className={styles.content}>
-
+				{content.map(line => {
+					if (line.type === "paragraph") {
+						return <p>{line.content}</p>;
+					} else if (line.type === "link") {
+						return (
+							<p>
+								{" "}
+								<a>{line.content}</a>
+							</p>
+						);
+					}
+				})}
 			</div>
 
 			<form className={styles.commentForm}>
