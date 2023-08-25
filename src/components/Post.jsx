@@ -38,6 +38,10 @@ export function Post({ author, publishedAt, content }) {
 		setNewCommentText(event.target.value);
 	}
 
+	function deleteComment(comment) {
+		console.log(`deletar comentário "${comment}"`);
+	}
+
 	return (
 		<article className={styles.post}>
 			<header>
@@ -51,7 +55,8 @@ export function Post({ author, publishedAt, content }) {
 
 				<time
 					title={publishedDateFormatted}
-					dateTime={publishedAt.toISOString()}>
+					dateTime={publishedAt.toISOString()}
+				>
 					{publishedDateRelativeToNow}
 				</time>
 			</header>
@@ -70,14 +75,18 @@ export function Post({ author, publishedAt, content }) {
 				})}
 			</div>
 
-			<form onSubmit={handleCreateNewComment} className={styles.commentForm}>
+			<form
+				onSubmit={handleCreateNewComment}
+				className={styles.commentForm}
+			>
 				<strong>Deixe seu feedback</strong>
 
 				<textarea
 					name="comment"
 					placeholder="Deixe um comentário"
 					value={newCommentText}
-					onChange={handleNewCommentChange}></textarea>
+					onChange={handleNewCommentChange}
+				></textarea>
 
 				<footer>
 					<button type="submit">Publicar</button>
@@ -86,7 +95,13 @@ export function Post({ author, publishedAt, content }) {
 
 			<div className={styles.commentList}>
 				{comments.map(comment => {
-					return <Comment key={comment} content={comment} />;
+					return (
+						<Comment
+							key={comment}
+							content={comment}
+							onDeleteComment={deleteComment}
+						/>
+					);
 				})}
 			</div>
 		</article>
