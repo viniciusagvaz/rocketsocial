@@ -1,0 +1,26 @@
+# Key no React 
+
+## Por que única ?
+
+ 3 principais momentos em que um componente é renderizado novamente no React
+
+   1. Quando o estado altera;
+
+   2. Quando a propriedade altera;
+
+   3. Quando um componente pai renderizado novamente;
+
+   ----------------------------------------------------------------
+
+   1, 2, 3, 4
+
+   ----------------------------------------------------------------
+   
+   1, 2, 3, 4, 5
+
+## Por que não posso usar o indice do Array ?
+
+
+   const post = [1, 2, 3, 4, 5]
+   const post = [2, 1, 5, 4, 3]
+        index =  0, 1, 2, 3, 4
