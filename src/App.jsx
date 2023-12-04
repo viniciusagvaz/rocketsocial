@@ -28,8 +28,27 @@ const posts = [
 	{
 		id: 2,
 		author: {
-			avatarUrl:
-				"https://media.licdn.com/dms/image/D4E35AQH96yg0hlYG-g/profile-framedphoto-shrink_400_400/0/1651235394486?e=1693501200&v=beta&t=L60cjv28FvAIQolOA3t4gAGkH-JZ2xvZj9NjWDKaWGQ",
+			avatarUrl: "https://github.com/ingridsj.png",
+			name: "Ingrid Almeida",
+			role: "Software Developer",
+		},
+		content: [
+			{ type: "paragraph", content: "Eai, pessoal!" },
+			{
+				type: "paragraph",
+				content: "Meu projeto de jogo da memória já está no meu Github",
+			},
+			{
+				type: "link",
+				content: "https://github.com/ingridsj/disney-memory-game",
+			},
+		],
+		publishedAt: new Date("2023-08-24 13:05:06"),
+	},
+	{
+		id: 3,
+		author: {
+			avatarUrl: "https://github.com/Navi138.png",
 			name: "Marcos Wunder",
 			role: "Técnico e Editor de Som",
 		},

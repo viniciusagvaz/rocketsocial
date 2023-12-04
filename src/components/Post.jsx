@@ -10,7 +10,7 @@ import styles from "./Post.module.css";
 // estado = variáveis que eu quero que o componente monitore
 
 export function Post({ author, publishedAt, content }) {
-	const [comments, setComments] = useState(["Post muito bacana, hein?!"]);
+	const [comments, setComments] = useState([]);
 
 	const [newCommentText, setNewCommentText] = useState("");
 
